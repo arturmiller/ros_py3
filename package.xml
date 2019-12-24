@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>ros_py3</name>
   <version>0.0.1</version>
   <description>A minimal example</description>
@@ -11,7 +14,8 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <depend>rospy</depend>
+  <!-- depend condition="$ROS_PYTHON_VERSION == 2">rospy</depend -->
+  <!-- depend condition="$ROS_PYTHON_VERSION == 3">rospy</depend -->
 
 </package>
 
