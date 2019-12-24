@@ -14,6 +14,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
+  <exec_depend>python-numpy</exec_depend>
   <!-- depend condition="$ROS_PYTHON_VERSION == 2">rospy</depend -->
   <!-- depend condition="$ROS_PYTHON_VERSION == 3">rospy</depend -->
 
