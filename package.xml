@@ -16,7 +16,7 @@
 
   <depend>roscpp</depend>
 
-  <depend>python-numpy</depend>
+  <depend>python3-numpy</depend>
   <!-- depend condition="$ROS_PYTHON_VERSION == 2">python-numpy</depend -->
   <!-- depend condition="$ROS_PYTHON_VERSION == 3">python3-numpy</depend -->
 
