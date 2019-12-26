@@ -14,8 +14,6 @@ matrix:
     - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic ROS_PYTHON_VERSION=2
     - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic ROS_PYTHON_VERSION=3 ROS_FROM_SCRATCH=true
     - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=kinetic ROS_PYTHON_VERSION=2
-    - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=kinetic ROS_PYTHON_VERSION=3 ROS_FROM_SCRATCH=true
-    - env: UPSTREAM_WORKSPACE=debian ROS_DISTRO=noetic
 install:
   - git clone --single-branch --branch python3-noetic https://github.com/ipa-mdl/industrial_ci.git .industrial_ci
 script:
