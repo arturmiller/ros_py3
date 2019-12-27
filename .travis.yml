@@ -11,9 +11,9 @@ env:
     - ROS_PARALLEL_JOBS='-j1'
 matrix:
   include:
-    - env: AFTER_SETUP_TARGET_WORKSPACE='sh run_before.sh' UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic ROS_PYTHON_VERSION=2
-    - env: AFTER_SETUP_TARGET_WORKSPACE='sh run_before.sh' UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic ROS_PYTHON_VERSION=3 ROS_FROM_SCRATCH=true
-    - env: AFTER_SETUP_TARGET_WORKSPACE='sh run_before.sh' UPSTREAM_WORKSPACE=debian ROS_DISTRO=kinetic ROS_PYTHON_VERSION=2
+    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh run_before.sh' UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic ROS_PYTHON_VERSION=2
+    - env: AFTER_INSTALL_TARGET_DEPENDENCIESE='sh run_before.sh' UPSTREAM_WORKSPACE=debian ROS_DISTRO=melodic ROS_PYTHON_VERSION=3 ROS_FROM_SCRATCH=true
+    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh run_before.sh' UPSTREAM_WORKSPACE=debian ROS_DISTRO=kinetic ROS_PYTHON_VERSION=2
 install:
   - git clone --single-branch --branch python3-noetic https://github.com/ipa-mdl/industrial_ci.git .industrial_ci
 script:
