@@ -7,14 +7,11 @@ services:
 env:
   global:
     - VERBOSE_OUTPUT='true'
-    - CATKIN_PARALLEL_JOBS='-p1'
-    - ROS_PARALLEL_JOBS='-j1'
 matrix:
   include:
-    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh run_before.sh' ROS_DISTRO=melodic
-    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh run_before.sh' ROS_DISTRO=melodic ROS_PYTHON_VERSION=3 ROS_FROM_SCRATCH=true
-    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh run_before.sh' ROS_DISTRO=kinetic
-    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh run_before.sh' ROS_DISTRO=noetic
+    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh ci_config/run_before.sh' ROS_DISTRO=melodic
+    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh ci_config/run_before.sh' ROS_DISTRO=kinetic
+    - env: AFTER_INSTALL_TARGET_DEPENDENCIES='sh ci_config/noetic_run_before_python3.sh' ROS_DISTRO=noetic
 install:
   - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
 script:
